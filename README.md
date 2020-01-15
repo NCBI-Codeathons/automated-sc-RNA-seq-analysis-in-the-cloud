@@ -14,4 +14,4 @@
 
 Team
 Angela Pisco (@aopisco)
-![rough draft](TMS1)
+![rough draft](TMS1.jpg)
