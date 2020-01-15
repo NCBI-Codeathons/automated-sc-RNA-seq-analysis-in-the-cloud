@@ -1,3 +1,11 @@
+import argparse
+import scanpy as sc
+import numpy
+import IPython.display as IP
+import igraph
+import louvain
+import leidenalg
+
 def main(
     input_file_path,
     output_file_path,
@@ -10,21 +18,14 @@ def main(
     ):
 
     print('reading data in')
-    adata = read_h5ad(input_file_path)
-    display(adata)
+    adata = sc.read_h5ad(input_file_path)
+    IP.display(adata)
 
     print('pre-processing')
     sc.pp.filter_genes(adata, min_cells=min_cells)
     sc.pp.filter_cells(adata, min_genes=min_genes)
     sc.pp.filter_cells(adata, min_counts=min_counts)
-    display(adata)
-
-    print('pre-processing visualizations') # optional step
-    sc.pl.violin(adata_nonans, ['n_genes', 'n_counts'],jitter=0.4, multi_panel=True)
-    sc.pl.scatter(adata_nonans, x='n_counts', y='n_genes')
-
-    sc.pl.violin(adata_nonans, ['n_counts','n_genes'], groupby='tissue', size=2, log=True)
-    adata.raw = adata
+    IP.display(adata)
 
 
     print('normalization & scaling')
@@ -34,6 +35,14 @@ def main(
                               log=True, copy=True)
     sc.pp.log1p(adata)
     sc.pp.scale(adata, max_value=10, zero_center=False)
+
+
+    print('pre-processing visualizations') # optional step
+    sc.pl.violin(adata_nonans, ['n_genes', 'n_counts'],jitter=0.4, multi_panel=True)
+    sc.pl.scatter(adata_nonans, x='n_counts', y='n_genes')
+
+    sc.pl.violin(adata_nonans, ['n_counts','n_genes'], groupby='tissue', size=2, log=True)
+    adata.raw = adata
 
     print('pca')
     sc.tl.pca(adata)
@@ -67,4 +76,4 @@ if __name__ == '__main__':
         '--output', required=True,
         help='directory where arrow files should be written')
     args = parser.parse_args()
-    main(args.input_dir, args.output_dir)
+    main(args.input, args.output)
