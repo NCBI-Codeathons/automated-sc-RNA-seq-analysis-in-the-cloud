@@ -2,6 +2,8 @@
 
 The goal of this project is to build a semi-automated sc-RNA-seq analysis workflow in the cloud. Tabula Muris Senis will be used as the reference database for the annotations.
 
+[![flow diagram](https://docs.google.com/drawings/d/e/2PACX-1vTZg8kMyaVzBSdXGusJ4uer-Rfrp0A63tWO2eGIw2Z3ovV1idc9tvWa_TnYmqaosvPcFMqKeiCny8b1/pub?w=700&h=150)](https://docs.google.com/drawings/d/1X1gd4E_kKp0RXNi4ybiMp_ZxX1uOAlG9Y4yk1IPLlDQ/edit)
+
 ## Where is the data?
 - **Tabula Muris**
   - [site](https://tabula-muris.ds.czbiohub.org/)
