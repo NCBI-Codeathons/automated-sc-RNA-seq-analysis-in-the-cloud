@@ -7,13 +7,13 @@ from OnClass.other_datasets_utils import my_assemble, data_names_all, load_names
 
 OnClassModel = OnClassModel()
 tp2emb, tp2i, i2tp = OnClassModel.EmbedCellTypes(dim=500,
-    cell_type_network_file='./OnClass_data/cell_ontology/cl.ontology',
-    use_pretrain='./OnClass_data/pretrain/tp2emb_500')
+    cell_type_network_file='../data/OnClass_data/cell_ontology/cl.ontology',
+    use_pretrain='../data/OnClass_data/pretrain/tp2emb_500')
 
 
 # Here, we used the pretrain cell type embedding file tp2emb_500
 
-data_file = './raw_data/tabula-muris-senis-facs_cell_ontology.h5ad'
+data_file = '../data/OnClass_data/data_used_for_training/tabula-muris-senis-facs_cell_ontology.h5ad'
 train_X, train_genes, train_Y = read_data(feature_file=data_file, tp2i = tp2i, AnnData_label='cell_ontology_class_reannotated')
 
 
