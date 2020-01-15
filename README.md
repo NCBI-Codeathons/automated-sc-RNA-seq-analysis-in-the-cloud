@@ -14,4 +14,4 @@
 
 Team
 Angela Pisco (@aopisco)
-![picture1]{IMG_1112.HEIC}
+![picture1](IMG_1112.HEIC)
