@@ -11,3 +11,6 @@
   - [raw data (s3)](https://s3.console.aws.amazon.com/s3/buckets/czb-tabula-muris-senis/)
   - [processed data (figshare)](https://figshare.com/projects/Tabula_Muris_Senis/64982)
   - [A Single Cell Transcriptomic Atlas Characterizes Aging Tissues in the Mouse (BioRxiv)](https://www.biorxiv.org/content/10.1101/661728v2)
+
+Team
+Angela Pisco (@aopisco)
