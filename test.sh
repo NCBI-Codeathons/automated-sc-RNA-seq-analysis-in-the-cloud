@@ -4,4 +4,4 @@ set -o pipefail
 
 die() { set +v; echo "$*" 1>&2 ; exit 1; }
 
-die 'This should fail!'
+echo 'Could have more tests here...'
