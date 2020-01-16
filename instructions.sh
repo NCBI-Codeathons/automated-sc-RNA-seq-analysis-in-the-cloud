@@ -15,9 +15,3 @@ set -o pipefail
 [ -e ./data/OnClass_data/OnClass_data_others/cell_ontology/cl.ontology.gz] || wget https://files.figshare.com/20157284/OnClass_data_others.tar.gz -O - | tar -xz -C ./data/OnClass_data/
 # FACS cells used in the study
 [ -e ./data/OnClass_data/data_used_for_training/tabula-muris-senis-facs_cell_ontology.h5ad] || wget https://files.figshare.com/20157215/tabula-muris-senis-facs_cell_ontology.h5ad -O ./data/OnClass_data/data_used_for_training/tabula-muris-senis-facs_cell_ontology.h5ad
-
-
-
-build Dockerimage
-run Dockerimage with the files we have pulled down
-check output is what we want the output to be
