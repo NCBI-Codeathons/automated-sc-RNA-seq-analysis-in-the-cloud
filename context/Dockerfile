@@ -1,18 +1,18 @@
-# this is a Dockerfile
-# build Dockerimage
-# run Dockerimage with the files we have pulled down
-# check output is what we want the output to be
-
-
 FROM continuumio/miniconda3
-RUN apt-get update
-RUN apt-get -y install libc-dev
-RUN apt-get -y install libc6-dev
-RUN conda update -n base -c defaults conda
-RUN conda install -c anaconda gcc
 
-#RUN apt updated
-#RUN apt install build-essential
+# Update and install should be on the same line:
+# If you add a library, you don't want an old cache of the package list.
+
+RUN apt-get -y update && \
+    apt-get -y install \
+      build-essential \
+      libcairo-dev \
+      libffi-dev \
+      libxml2-dev \
+      pkg-config \
+      python-dev \
+      python-pip \
+      zlib1g-dev
 
 # COPY requirements-freeze.txt .
 # RUN pip install  -r ./requirements-freeze.txt
@@ -23,6 +23,8 @@ RUN conda install -c anaconda gcc
 
 COPY requirements.txt .
 RUN pip install  -r ./requirements.txt
+RUN pip freeze  # Copy this to requirements-freeze.txt
+
 COPY . .
 CMD [ "python", "processing.py", \
       "--input", "/input", \
