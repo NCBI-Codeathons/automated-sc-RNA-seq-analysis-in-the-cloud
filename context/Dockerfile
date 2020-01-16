@@ -14,8 +14,8 @@ RUN apt-get -y update && \
       python-pip \
       zlib1g-dev
 
-# COPY requirements-freeze.txt .
-# RUN pip install  -r ./requirements-freeze.txt
+COPY requirements-freeze.txt .
+RUN pip install  -r ./requirements-freeze.txt
 
 # In development, you may want to pin a single dependency in requirements.txt,
 # without throwing away the entire cache layer from requirements-freeze.txt.
@@ -23,7 +23,7 @@ RUN apt-get -y update && \
 
 COPY requirements.txt .
 RUN pip install  -r ./requirements.txt
-RUN pip freeze  # Copy this to requirements-freeze.txt
+RUN pip freeze  # Copy this to requirements-freeze.txt if there are changes.
 
 COPY . .
 CMD [ "python", "processing.py", \
