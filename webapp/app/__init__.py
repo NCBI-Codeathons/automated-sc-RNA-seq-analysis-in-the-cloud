@@ -1,6 +1,7 @@
 from flask import Flask
 
-UPLOAD_FOLDER = '/Users/sanjanashah/Desktop/tms_test'
+#change upload folder
+UPLOAD_FOLDER = '/tmp'
 app = Flask(__name__)
 
 from app import routes2
