@@ -8,7 +8,7 @@ Per the the Chan Zuckerberg Biohub website, “Tabula Muris is a compendium of s
 
 ## Visual:
 
-![TMS2](TMS2.PDF)
+![TMS2](TMS2.pdf)
 
 ## Workflow:
 
