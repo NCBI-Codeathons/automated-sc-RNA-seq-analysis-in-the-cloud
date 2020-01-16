@@ -5,7 +5,7 @@ from app import app
 from flask import Flask, flash, request, redirect, render_template
 from werkzeug.utils import secure_filename
 
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'h5ad'])
 
 
 #use pathlib instead
