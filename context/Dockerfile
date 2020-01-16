@@ -4,7 +4,15 @@
 # check output is what we want the output to be
 
 
-FROM python:3.9.0a2-alpine3.10
+FROM continuumio/miniconda3
+RUN apt-get update
+RUN apt-get -y install libc-dev
+RUN apt-get -y install libc6-dev
+RUN conda update -n base -c defaults conda
+RUN conda install -c anaconda gcc
+
+#RUN apt updated
+#RUN apt install build-essential
 
 # COPY requirements-freeze.txt .
 # RUN pip install  -r ./requirements-freeze.txt
