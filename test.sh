@@ -4,4 +4,6 @@ set -o pipefail
 
 die() { set +v; echo "$*" 1>&2 ; exit 1; }
 
-echo 'Could have more tests here...'
+flake8 || die 'Try "autopep8 --in-place --aggressive -r ."'
+
+pytest
