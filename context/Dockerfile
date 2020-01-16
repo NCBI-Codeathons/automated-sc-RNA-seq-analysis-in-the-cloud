@@ -3,6 +3,9 @@ FROM continuumio/miniconda3
 # Update and install should be on the same line:
 # If you add a library, you don't want an old cache of the package list.
 
+# apt-get for python-igraph taken from:
+# https://github.com/igraph/python-igraph/blob/master/docker/jupyter/Dockerfile
+
 RUN apt-get -y update && \
     apt-get -y install \
       build-essential \
