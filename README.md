@@ -1,6 +1,6 @@
 # Automated scRNA-seq Analysis in the Cloud 
 
-The goal of this project is to build a semi-automated sc-RNA-seq analysis workflow in the cloud. *Tabula Muris Senis* will be used as the reference database for the annotations.
+The goal of this project is to build a semi-automated sc-RNA-seq analysis workflow in the cloud. Tabula Muris Senis will be used as the reference database for the annotations.
 
 ## What is Tabula Muris Senis?
 
@@ -8,7 +8,7 @@ Per the the Chan Zuckerberg Biohub website, “Tabula Muris is a compendium of s
 
 ## Visual:
 
-![TMS2](TMS2.pdf)
+PLACEHOLDER
 
 ## Workflow:
 
