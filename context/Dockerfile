@@ -31,4 +31,4 @@ RUN pip freeze  # Copy this to requirements-freeze.txt if there are changes.
 COPY . .
 CMD [ "python", "processing.py", \
       "--input", "/input", \
-      "--output", "/output" ]
+      "--output", "/output.h5ad" ]
