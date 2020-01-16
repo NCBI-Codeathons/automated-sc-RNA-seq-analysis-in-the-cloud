@@ -13,7 +13,7 @@ Per the the Chan Zuckerberg Biohub website, “Tabula Muris is a compendium of s
 ## Workflow:
 
 1. **Input gene counts and metadata .h5ad**  
-  1. Preprocessing  
+    1. Preprocessing  
 2. **Process data using Scanpy**  
     1. Minimum number of reads  
     2. Minimum number of genes  
@@ -21,8 +21,8 @@ Per the the Chan Zuckerberg Biohub website, “Tabula Muris is a compendium of s
 3. **Visualization**  
       1. Utilizing CZ Biohub cellxgene tool - <https://tabula-muris-senis.ds.czbiohub.org/all/scVI-UMAP/>  
 4. **Annotations**  
-  1. Label Propagation  
-  2. SCVI & OnClass
+     1. Label Propagation  
+    2. SCVI & OnClass
 
   
   ## Where is the data?
