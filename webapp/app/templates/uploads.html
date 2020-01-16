@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Tabula Muris Senis</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #0192b5;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {
+    padding:20px;
+    text-align: center;
+    }
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Tabula Muris Senis</h1>
+  
+</div>
+
+<div class="content">
+        <p>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                  <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+        </p>
+
+        <form method="post" action="/" enctype="multipart/form-data">
+            <TABLE BORDER="3"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3" ALIGN="CENTER">
+                    <TR>
+                       <TH COLSPAN="2"><BR>
+                        <H3>Input Files</H3>
+                       </TH>
+                    </TR>
+                    <TR>
+                       <TH rowspan="2"> 
+                           
+                        <dl>
+                            <h3>h5ad File:</h3>
+                            <p>
+                                <input type="file" name="file" autocomplete="off" required>
+                            </p>
+                        </dl>
+                    </TH>
+
+
+                    <TH>         
+                            
+                         <dl>
+                             <h3>Gene Count Table</h3>
+                             <p></p>
+                                 <input type="file" name="file2" autocomplete="off" required>
+                             </p>
+                         </dl>
+                     </TH>
+                    </TR>
+                    <TH>         
+                            
+                         <dl>
+                             <h3>Metadata File</h3>
+                             <p></p>
+                                 <input type="file" name="file3" autocomplete="off" required>
+                             </p>
+                         </dl>
+                     </TH>
+                    </TR>
+
+                 </TABLE>
+
+                 <p>    
+                        <input type="submit" value="Submit">
+                    </p>
+        </form>
+
+        
+</div>
+
+</body>
+</html>
+
