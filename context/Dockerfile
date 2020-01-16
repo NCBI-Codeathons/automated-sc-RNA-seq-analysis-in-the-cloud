@@ -1,4 +1,8 @@
 # this is a Dockerfile
+# build Dockerimage
+# run Dockerimage with the files we have pulled down
+# check output is what we want the output to be
+
 
 FROM python:3.9.0a2-alpine3.10
 
