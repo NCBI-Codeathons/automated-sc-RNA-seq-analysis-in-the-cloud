@@ -17,6 +17,3 @@ The goal of this project is to build a semi-automated sc-RNA-seq analysis workfl
   - [processed data (figshare)](https://figshare.com/projects/Tabula_Muris_Senis/64982)
   - [A Single Cell Transcriptomic Atlas Characterizes Aging Tissues in the Mouse (BioRxiv)](https://www.biorxiv.org/content/10.1101/661728v2)
 
-
-![rough draft](TMS1.jpg)
-
