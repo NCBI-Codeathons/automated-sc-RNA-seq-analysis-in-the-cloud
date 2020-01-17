@@ -2,9 +2,9 @@
 
 ## What’s the problem?
 
-Currently, the process of uploading sc-RNA-seq data is difficult to manage without a repertoire of technological skills. There is no singular workflow that keeps this data easy to organize, relevant, and results in user friendly output.
+Currently, the process of analysing sc-RNA-seq data is difficult to manage without a repertoire of technological skills. There is no singular workflow that guides the user from data inputs to relevant analysis, particularly with a user friendly output.
 
-Utilizing existing tools, we set out to create a linear workflow that would filter, annotate, label, and organize data. We utilized existing databases such as Tabula Muris Senis and HCA as a starting point.
+Utilizing existing tools, we set out to create a linear workflow that would perform basic QC like filtering, normalization and automated annotations. We utilized the existing database Tabula Muris Senis as the starting point for the labelling step but we intend to use other datasets, in particular the ones part of the HCA when they become available.
 
 *Objective*: Build a semi-automated sc-RNA-seq analysis workflow in the cloud. Tabula Muris Senis will be used as the reference database for the annotations.
 
