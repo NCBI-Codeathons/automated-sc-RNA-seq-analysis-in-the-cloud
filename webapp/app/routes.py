@@ -74,8 +74,18 @@ def wait_processing(id):
         # Put either a meta refresh or a javascript refresh on this page,
         # so it will retry every 5 seconds or so.
 
+
 @blueprint.route('/done-processing/<id>',)
-def done(id):
+def done_processing(id):
     # TODO!
     summary = create_summary(id)
     return render_template('done-processing.html', summary=summary)
+
+
+@blueprint.route('/start-visualization/<id>', methods=['POST'])
+def start_visualization(id):
+    # TODO: Start cellxgene!
+    # How long does cellxgene take to start? Do we need a please_wait page,
+    # or can we wait to respond until it has started?
+    visualization_url = start_visualization(current_app.config['UPLOAD_FOLDER'], id)
+    return redirect(visualization_url)
