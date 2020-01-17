@@ -8,5 +8,5 @@ set -o pipefail
 # TODO: Make assertion about output.
 
 cd webapp
-./start.sh
+./start.sh &
 # TODO: Wait for Flask to start and check response.
