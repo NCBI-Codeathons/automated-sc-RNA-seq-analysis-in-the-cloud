@@ -48,7 +48,7 @@ It can run in a local development environment, but it's a long way from
 being something that could be deployed in the cloud. We've created issues
 for some of the next steps.
 
-![graphic2](graphic2.svg)
+![TMS2](TMS2.svg)
 
 1. **Input gene counts and metadata .h5ad**  
     1. Preprocessing  
