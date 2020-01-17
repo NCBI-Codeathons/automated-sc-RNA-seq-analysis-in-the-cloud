@@ -14,7 +14,7 @@ Utilizing existing tools, we set out to create a linear workflow that would perf
 
 ## What is OnClass?
 
-[**OnClass**](https:///onclass.readthedocs.io/) is a python package for single-cell cell type annotation. It uses the Cell Ontology to capture the cell type similarity and because of that it can label cells in the new dataset whether they are present or not in the training data. 
+[**OnClass**](https:///onclass.readthedocs.io/) is a python package for single-cell cell type annotation. It uses the Cell Ontology to capture the cell type similarity and because of that it can label cells in the new dataset whether they are present or not in the training data.
 
 ## What's in this repo?
 
