@@ -7,7 +7,7 @@ from werkzeug.utils import secure_filename
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'h5ad'])
 
 
-# use pathlib instead
+# TODO: use pathlib instead
 def allowed_file(filename):
     return '.' in filename and filename.rsplit(
         '.', 1)[1].lower() in ALLOWED_EXTENSIONS
