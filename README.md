@@ -6,11 +6,39 @@ The goal of this project is to build a semi-automated sc-RNA-seq analysis workfl
 
 Per the the Chan Zuckerberg Biohub website, “Tabula Muris is a compendium of single cell transcriptome data from the model organism Mus musculus, containing nearly 100,000 cells from 20 organs and tissues. The data allow for direct and controlled comparison of gene expression in cell types shared between tissues, such as immune cells from distinct anatomical locations.” More information on Tabula Muris Senis can be found [here](https://tabula-muris.ds.czbiohub.org).
 
-## Visual:
+## What's in this repo?
+
+There are three related python projects here:
+- In [`webapp`][webapp/] there is simple flask app, that uses the docker containers defined in
+- [`context_processing`][context_processing]
+- and [`context_annotations`][context_annotations].
+
+To download sample data:
+```
+./download-data.sh
+```
+
+To run the flask app:
+```
+cd webapp
+pip install -r requirements.txt
+./start.sh
+```
+
+The app uses images we have pushed to dockerhub.
+To rebuild the image locally and run it with the samples in `data/`:
+```
+./build-and-run-image.sh
+```
+
+## Roadmap:
+
+This was begun at the Single Cell Hackathon, NYGC, January 15-17, 2020.
+It can run in a local development environment, but it's a long ways from
+being something that could be deployed in the cloud. We've created issues
+for some of the next steps.
 
 ![block diagram: Input -> Processing -> Visualization -> Annotation](block-diagram.jpg)
-
-## Workflow:
 
 1. **Input gene counts and metadata .h5ad**  
     1. Preprocessing  
@@ -25,10 +53,7 @@ Per the the Chan Zuckerberg Biohub website, “Tabula Muris is a compendium of s
     2. SCVI & OnClass
 
 
-## Where is the data?
-
-Sample data to use during development can be downloaded by running `./download-data.sh`.
-For more information:
+## For more information
 
 - **Tabula Muris**
   - [site](https://tabula-muris.ds.czbiohub.org/)
