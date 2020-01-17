@@ -1,10 +1,10 @@
+from app import routes2
 from flask import Flask
 
 # TODO: Change upload folder!
 UPLOAD_FOLDER = '../'
 app = Flask(__name__)
 
-from app import routes2
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = "secret key"
