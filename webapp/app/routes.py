@@ -57,25 +57,25 @@ def upload_file():
         # rather than changing to a GET.
 
 
-@blueprint.route('/start/<id>', methods=['POST'])
+@blueprint.route('/start-processing/<id>', methods=['POST'])
 def start_processing(id):
     # TODO: Start processing!
     start_processing(current_app.config['UPLOAD_FOLDER'], id)
-    return redirect(please_wait('wait', id))
+    return redirect(please_wait('wait_processing', id))
 
 
-@blueprint.route('/wait/<id>',)
-def please_wait(id):
+@blueprint.route('/wait-processing/<id>',)
+def wait_processing(id):
     # TODO!
     if output_exists_for_id(id):
-        return redirect(url_for('done', id))
+        return redirect(url_for('done_processing', id))
     else:
-        return render_template('please_wait.html')
+        return render_template('wait-processing.html')
         # Put either a meta refresh or a javascript refresh on this page,
         # so it will retry every 5 seconds or so.
 
-@blueprint.route('/done/<id>',)
+@blueprint.route('/done-processing/<id>',)
 def done(id):
     # TODO!
     summary = create_summary(id)
-    return render_template('done.html', summary=summary)
+    return render_template('done-processing.html', summary=summary)
