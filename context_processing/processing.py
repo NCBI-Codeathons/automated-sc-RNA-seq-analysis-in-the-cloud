@@ -26,6 +26,7 @@ def main(
     sc.pp.filter_genes(adata, min_cells=min_cells)
     sc.pp.filter_cells(adata, min_genes=min_genes)
     sc.pp.filter_cells(adata, min_counts=min_counts)
+
     IP.display(adata)
 
     print('normalization & scaling')
@@ -78,4 +79,5 @@ if __name__ == '__main__':
         '--output', required=True,
         help='directory where arrow files should be written')
     args = parser.parse_args()
+
     main(args.input, args.output)
