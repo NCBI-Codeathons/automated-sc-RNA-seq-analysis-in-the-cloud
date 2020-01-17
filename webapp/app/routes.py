@@ -1,7 +1,8 @@
 import os
 
 from flask import (
-    Blueprint, flash, request, redirect, render_template, current_app)
+    Blueprint, flash, request, redirect, render_template, current_app,
+    url_for)
 from werkzeug.utils import secure_filename
 
 
@@ -31,13 +32,19 @@ def upload_file():
             flash('No file part')
             return redirect(request.url)
 
+        # TODO: Generate unique ID
+        id = generate_uniq_id()
+
+        # TODO: Make a destination dir at {current_app.config['UPLOAD_FOLDER']}/{id}
+        dest_dir = 'TODO!'
+
         for (name, file) in request.files.items():
             print(name, file)
 
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(
-                    current_app.config['UPLOAD_FOLDER'],
+                    dest_dir,
                     filename
                 ))
                 # TODO:
@@ -45,5 +52,30 @@ def upload_file():
             # TODO:
             # else:
             # 	flash('Allowed file types are txt, pdf, png, jpg, jpeg, gif')
-            # 	return redirect(request.url)
-        return redirect('/')
+        return redirect(url_for('start_processing', id), code=307)
+        # HTTP 307 tells the browser to preserve POST,
+        # rather than changing to a GET.
+
+
+@blueprint.route('/start/<id>', methods=['POST'])
+def start_processing(id):
+    # TODO: Start processing!
+    start_processing(current_app.config['UPLOAD_FOLDER'], id)
+    return redirect(please_wait('wait', id))
+
+
+@blueprint.route('/wait/<id>',)
+def please_wait(id):
+    # TODO!
+    if output_exists_for_id(id):
+        return redirect(url_for('done', id))
+    else:
+        return render_template('please_wait.html')
+        # Put either a meta refresh or a javascript refresh on this page,
+        # so it will retry every 5 seconds or so.
+
+@blueprint.route('/done/<id>',)
+def done(id):
+    # TODO!
+    summary = create_summary(id)
+    return render_template('done.html', summary=summary)
