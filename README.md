@@ -6,11 +6,15 @@ Currently, the process of analysing sc-RNA-seq data is difficult to manage witho
 
 Utilizing existing tools, we set out to create a linear workflow that would perform basic QC like filtering, normalization and automated annotations. We utilized the existing database Tabula Muris Senis as the starting point for the labelling step but we intend to use other datasets, in particular the ones part of the HCA when they become available.
 
-*Objective*: Build a semi-automated sc-RNA-seq analysis workflow in the cloud. Tabula Muris Senis will be used as the reference database for the annotations.
+*Objective*: Build a semi-automated sc-RNA-seq analysis workflow in the cloud that takes raw, unprocessed data and outputs a processed file annotated using **OnClass** and **Tabula Muris Senis** as the reference database for the annotations.
 
 ## What is Tabula Muris Senis?
 
-Per the the Chan Zuckerberg Biohub website, “Tabula Muris is a compendium of single cell transcriptome data from the model organism Mus musculus, containing nearly 100,000 cells from 20 organs and tissues. The data allow for direct and controlled comparison of gene expression in cell types shared between tissues, such as immune cells from distinct anatomical locations.” More information on Tabula Muris Senis can be found [here](https://tabula-muris.ds.czbiohub.org).
+[**Tabula Muris Senis**](https://tabula-muris-senis.ds.czbiohub.org/) is a comprehensive resource for the cell biology community which offers a detailed molecular and cell-type specific portrait of aging.
+
+## What is OnClass?
+
+[**OnClass**](https:///onclass.readthedocs.io/) is a python package for single-cell cell type annotation. It uses the Cell Ontology to capture the cell type similarity and because of that it can label cells in the new dataset whether they are present or not in the training data. 
 
 ## What's in this repo?
 
