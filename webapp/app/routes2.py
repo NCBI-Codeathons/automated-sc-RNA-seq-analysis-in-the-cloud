@@ -1,46 +1,49 @@
 import os
 
-import urllib.request
-from app import app
-from flask import Flask, flash, request, redirect, render_template
+from flask import (
+    Blueprint, flash, request, redirect, render_template, current_app)
 from werkzeug.utils import secure_filename
+
+
+blueprint = Blueprint('routes', __name__, template_folder='templates')
+
 
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'h5ad'])
 
 
-#use pathlib instead
+# use pathlib instead
 def allowed_file(filename):
-	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+    return '.' in filename and filename.rsplit(
+        '.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-@app.route('/')
+
+@blueprint.route('/')
 def upload_form():
-	return render_template('uploads.html')
+    return render_template('uploads.html')
 
 
-
-@app.route('/', methods=['POST'])
+@blueprint.route('/', methods=['POST'])
 def upload_file():
-	if request.method == 'POST':
-		# check if the post request has the file part
-		if 'file' not in request.files:
-			flash('No file part')
-			return redirect(request.url)
 
-		for (name,file) in request.files.items():
-			print(name, file)
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
 
-			if file and allowed_file(file.filename):
-				filename = secure_filename(file.filename)
-				file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-#				flash(f'uploaded {name}')
-		return redirect('/')
-#			else:
-#				flash('Allowed file types are txt, pdf, png, jpg, jpeg, gif')
-#				return redirect(request.url)
+        for (name, file) in request.files.items():
+            print(name, file)
 
-
-
-
-
-if __name__ == "__main__":
-	app.run()
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(
+                    current_app.config['UPLOAD_FOLDER'],
+                    filename
+                ))
+                # TODO:
+                # flash(f'uploaded {name}')
+            # TODO:
+            # else:
+            # 	flash('Allowed file types are txt, pdf, png, jpg, jpeg, gif')
+            # 	return redirect(request.url)
+        return redirect('/')
