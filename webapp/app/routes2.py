@@ -33,11 +33,13 @@ def upload_file():
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-#				flash(f'uploaded {name}')
+                # TODO:
+                # flash(f'uploaded {name}')
+            # TODO:
+            # else:
+            # 	flash('Allowed file types are txt, pdf, png, jpg, jpeg, gif')
+            # 	return redirect(request.url)
         return redirect('/')
-#			else:
-#				flash('Allowed file types are txt, pdf, png, jpg, jpeg, gif')
-#				return redirect(request.url)
 
 
 if __name__ == "__main__":
