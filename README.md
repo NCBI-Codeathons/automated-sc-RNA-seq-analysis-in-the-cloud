@@ -9,9 +9,9 @@ Per the the Chan Zuckerberg Biohub website, “Tabula Muris is a compendium of s
 ## What's in this repo?
 
 There are three related python projects here:
-- In [`webapp`][webapp/] there is simple flask app, that uses the docker containers defined in
-- [`context_processing`][context_processing]
-- and [`context_annotations`][context_annotations].
+- In [`webapp`](webapp/) there is simple flask app, that uses the docker containers defined in
+- [`context_processing`](context_processing/)
+- and [`context_annotations`](context_annotations/).
 
 To download sample data:
 ```
