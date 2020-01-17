@@ -86,8 +86,8 @@ for some of the next steps.
     - [A Single Cell Transcriptomic Atlas Characterizes Aging Tissues in the Mouse (BioRxiv)](https://www.biorxiv.org/content/10.1101/661728v2)
 
   ## Codeathon team:
-**Lead** [Angela Oliveira Pisco, PhD](https://github.com/aopisco) - Chan Zuckerberg Biohub
-[Chuck McCallum](https://github.com/mccalluc) - Harvard Medical School
-[Kyndal Goss](https://github.com/klg11585) – NIH Vaccine Research Center
-[Sanjana Shah](https://github.com/shahsanjana) - NIH Vaccine Research Center
-[Jaqueline Cattell](https://github.com/cattellj) – NIH Office of Data Science Strategy
+**Lead** [Angela Oliveira Pisco, PhD](https://github.com/aopisco) - Chan Zuckerberg Biohub  
+[Chuck McCallum](https://github.com/mccalluc) - Harvard Medical School  
+[Kyndal Goss](https://github.com/klg11585) – NIH Vaccine Research Center  
+[Sanjana Shah](https://github.com/shahsanjana) - NIH Vaccine Research Center  
+[Jaqueline Cattell](https://github.com/cattellj) – NIH Office of Data Science Strategy  
