@@ -5,6 +5,7 @@ from OnClass.other_datasets_utils import my_assemble, data_names_all, load_names
 
 import subprocess
 import scanpy as sc
+import argparse
 
 def main(
     input_file_path,
@@ -75,4 +76,5 @@ if __name__ == '__main__':
         help='directory containing h5ad files to read')
     args = parser.parse_args()
 
-    main(args.input, args.output)
+    main(args.input, args.output, args.data_file, args.cell_type_network_file,
+        args.use_pretrain, args.name_mapping_file)
