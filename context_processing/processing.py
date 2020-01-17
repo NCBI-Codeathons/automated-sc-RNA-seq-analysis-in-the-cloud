@@ -22,7 +22,6 @@ def main(
     adata = sc.read_h5ad(input_file_path)
     IP.display(adata)
 
-
     print('pre-processing')
     sc.pp.filter_genes(adata, min_cells=min_cells)
     sc.pp.filter_cells(adata, min_genes=min_genes)
@@ -57,14 +56,12 @@ def main(
     print('neighs')
     sc.pp.neighbors(adata, n_neighbors=n_neighbors, n_pcs=n_pcs)
 
-
     print('umap computing')
     sc.tl.umap(adata, n_components=2)
 
     print('clustering')
     sc.tl.louvain(adata, resolution=cluster_resolution)
     sc.tl.leiden(adata, resolution=cluster_resolution)
-
 
     print('save h5ad and launch cellxgene')
     adata.write(output_file_path)

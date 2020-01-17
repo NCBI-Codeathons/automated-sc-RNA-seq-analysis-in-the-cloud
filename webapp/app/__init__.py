@@ -1,10 +1,10 @@
+from app import routes2
 from flask import Flask
 
-#change upload folder
+# change upload folder
 UPLOAD_FOLDER = '../'
 app = Flask(__name__)
 
-from app import routes2
 #from app import routes
 
 
