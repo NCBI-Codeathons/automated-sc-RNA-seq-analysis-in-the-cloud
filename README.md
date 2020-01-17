@@ -31,6 +31,12 @@ To rebuild the image locally and run it with the samples in `data/`:
 ./build-and-run-image.sh
 ```
 
+There are some tests:
+- `test-ci.sh` is fast and is run by github:
+We should make sure we have a green checkmark before merging!
+- `test-local.sh` exercises all the scripts, and may be much slower.
+It *should* run successfully on a fresh checkout.
+
 ## Roadmap:
 
 This was begun at the Single Cell Hackathon, NYGC, January 15-17, 2020.
