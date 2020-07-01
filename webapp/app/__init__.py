@@ -2,7 +2,7 @@ import os
 
 from flask import Flask
 
-from . import routes2
+from . import routes
 
 
 def create_app(test_config=None):
@@ -19,6 +19,6 @@ def create_app(test_config=None):
     app.secret_key = "secret key"
     # TODO: app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
-    app.register_blueprint(routes2.blueprint)
+    app.register_blueprint(routes.blueprint)
 
     return app

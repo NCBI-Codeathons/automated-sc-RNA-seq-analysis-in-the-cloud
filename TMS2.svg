@@ -12,11 +12,13 @@
 	.st6{fill:url(#SVGID_3_);}
 	.st7{fill:url(#SVGID_4_);}
 	.st8{fill:url(#SVGID_5_);}
+
+	.st9{font-size:9px;}
 </style>
 <polygon class="st0" points="333,117 209,309 189,72 333,72 "/>
 <polygon class="st0" points="333,117 209,309 189,72 333,72 "/>
-<rect x="172.5" y="97.5" class="st0" width="194.5" height="133.5"/>
-<text transform="matrix(1 0 0 1 208.3467 106.02)" class="st1 st2">Processing using Scanpy</text>
+<rect x="173.5" y="74.5" class="st0" width="194.5" height="133.5"/>
+<text transform="matrix(1 0 0 1 208.105 83.02)" class="st1 st2">Processing using Scanpy:</text>
 <g>
 	
 		<image style="overflow:visible;opacity:0.75;" width="194" height="95" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMIAAABfCAYAAAC6GRisAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
@@ -579,4 +581,7 @@ rkJggg==" transform="matrix(1 0 0 1 733 28)">
 <rect x="62.64" y="77.36" class="st0" width="76.56" height="74.12"/>
 <text transform="matrix(1 0 0 1 87.4541 85.877)"><tspan x="0" y="0" class="st1 st2">Input</tspan><tspan x="-20.44" y="14.4" class="st1 st2">• gene counts</tspan><tspan x="-13.54" y="28.8" class="st1 st2">• metadata</tspan></text>
 <rect x="239.65" y="-77.14" class="st0" width="241.2" height="96.85"/>
-</svg>
+
+<rect x="155.05" y="92.93" class="st0" width="230.85" height="96.24"/>
+<text transform="matrix(1 0 0 1 199.3765 99.3184)"><tspan x="0" y="0" class="st1 st9">Sc.pp.filter_genes(adata, min_cells=3)</tspan><tspan x="-4.62" y="10.8" class="st1 st9">Sc.pp.filter_cells(adata, min_genes=250)</tspan><tspan x="-8.36" y="21.6" class="st1 st9">Sc.pp.filter_cells(adata, min_counts=2500)</tspan><tspan x="38.88" y="32.4" class="st1 st9">Adata.raw=adata</tspan></text>
+
