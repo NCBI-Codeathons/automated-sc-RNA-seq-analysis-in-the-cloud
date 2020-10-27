@@ -9,7 +9,7 @@ cffi==1.12.3
 chardet==3.0.4
 conda==4.7.12
 conda-package-handling==1.6.0
-cryptography==2.7
+cryptography==3.2
 cycler==0.10.0
 decorator==4.4.1
 fbpca==1.0
