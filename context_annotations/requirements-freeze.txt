@@ -78,7 +78,7 @@ termcolor==1.1.0
 tqdm==4.36.1
 traitlets==4.3.3
 umap-learn==0.3.10
-urllib3==1.24.2
+urllib3==1.26.5
 wcwidth==0.1.8
 Werkzeug==0.16.0
 zipp==1.0.0
