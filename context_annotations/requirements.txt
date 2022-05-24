@@ -5,4 +5,4 @@ louvain==0.6.1
 leidenalg==0.7.0
 python-igraph==0.7.1.post6
 onclass>=0.9
-tensorflow==1.13.1
+tensorflow==2.6.4
