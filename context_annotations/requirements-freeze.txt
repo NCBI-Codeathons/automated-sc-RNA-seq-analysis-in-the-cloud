@@ -39,7 +39,7 @@ natsort==7.0.0
 networkx==2.4
 numba==0.47.0
 numexpr==2.7.1
-numpy==1.18.1
+numpy==1.22.0
 OnClass==0.93
 packaging==20.0
 pandas==0.25.3
